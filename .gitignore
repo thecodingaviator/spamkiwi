@@ -7,9 +7,11 @@
 
 # testing
 /coverage
+/server/venv
 
 # production
 /build
+/server/uploads
 
 # misc
 .DS_Store
