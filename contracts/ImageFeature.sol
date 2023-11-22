@@ -11,4 +11,9 @@ contract ImageFeatureStore {
     function retrieveFeature(string memory imageId) public view returns (string memory) {
         return imageFeatures[imageId];
     }
+
+    function replaceFeature(string memory imageId, string memory newFeatures) public {
+        require(bytes(imageFeatures[imageId]).length > 0, "Image not found");
+        imageFeatures[imageId] = newFeatures;
+    }
 }
